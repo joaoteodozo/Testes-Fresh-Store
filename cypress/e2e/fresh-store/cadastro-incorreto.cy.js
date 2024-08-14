@@ -36,7 +36,7 @@ describe('Realiza cadastro incorretamente e valida se as mensagens de erro são 
     it('Valida se ao não preencher a data de nascimento a mensagem de erro é exibida', () => {
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
-        cy.get('input[id="register-email"]').type('joaoteodozo@teste.com');
+        cy.get('input[id="register-email"]').type(Cypress.env('email'), {log: false});
         cy.contains('button', 'Registrar').click();
         cy.on('window:alert', (text) => {
             expect(text).to.equal('Por favor, preencha sua data de nascimento!');
@@ -46,7 +46,7 @@ describe('Realiza cadastro incorretamente e valida se as mensagens de erro são 
     it('Valida se ao não preencher a senha a mensagem de erro é exibida', () => {
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
-        cy.get('input[id="register-email"]').type('joaoteodozo@teste.com');
+        cy.get('input[id="register-email"]').type(Cypress.env('email'), {log: false});
         cy.get('input[id="register-date"]').type('2003-04-20');
         cy.contains('button', 'Registrar').click();
         cy.on('window:alert', (text) => {
@@ -57,7 +57,7 @@ describe('Realiza cadastro incorretamente e valida se as mensagens de erro são 
     it('Valida se ao tentar cadastrar usuário com idade menor que 18 anos a mensagem de erro é exibida', () => {
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
-        cy.get('input[id="register-email"]').type('joaoteodozo@teste.com');
+        cy.get('input[id="register-email"]').type(Cypress.env('email'), {log: false});
         cy.get('input[id="register-date"]').type(dataAtual);
         cy.get('input[id="register-password"]').type(Cypress.env('password'), {log: false});
         cy.contains('button', 'Registrar').click();
@@ -69,14 +69,14 @@ describe('Realiza cadastro incorretamente e valida se as mensagens de erro são 
     it('Valida se ao tentar cadastrar usuário já existente a mensagem de erro é exibida', () => {
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
-        cy.get('input[id="register-email"]').type('joaoteodozo@teste.com');
+        cy.get('input[id="register-email"]').type(Cypress.env('email'), {log: false});
         cy.get('input[id="register-date"]').type('2003-04-20');
         cy.get('input[id="register-password"]').type(Cypress.env('password'), {log: false});
         cy.contains('button', 'Registrar').click();
         cy.contains('a', 'clique aqui').click();
         cy.get('input[id="register-fullname"]').type('João Teodozo');
         cy.get('input[id="register-username"]').type(Cypress.env('username'), {log: false});
-        cy.get('input[id="register-email"]').type('joaoteodozo@teste.com');
+        cy.get('input[id="register-email"]').type(Cypress.env('email'), {log: false});
         cy.get('input[id="register-date"]').type('2003-04-20');
         cy.get('input[id="register-password"]').type(Cypress.env('password'), {log: false});
         cy.contains('button', 'Registrar').click();

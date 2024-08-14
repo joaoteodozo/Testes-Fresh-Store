@@ -17,9 +17,6 @@ describe('Validações no carrinho de compras', () => {
     })
     
     it('Valida se ao tentar prosseguir com o carrinho vazio a mensagem de erro é exibida', () => {
-        // cy.get('input[id="login-username"]').type(Cypress.env('username'), {log: false});
-        // cy.get('input[id="login-password"]').type(Cypress.env('password'), {log: false});
-        // cy.contains('button', 'Login').click();
         cy.get('a[id="cart"]').click();
         cy.get('button[id="finalize-btn"]').click();
         cy.on('window:alert', (text) => {
