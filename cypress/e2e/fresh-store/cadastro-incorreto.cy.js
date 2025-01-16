@@ -5,7 +5,7 @@ const dataAtual = Cypress.dayjs().format('YYYY-MM-DD');
 describe('Realiza cadastro incorretamente e valida se as mensagens de erro são exibidas', () => {
 
     beforeEach(() => {
-        cy.visit('https://qa-fresh-store.vercel.app')
+        cy.visit('https://fresh-store-qa.vercel.app')
         cy.contains('a', 'clique aqui').click();
     })
 

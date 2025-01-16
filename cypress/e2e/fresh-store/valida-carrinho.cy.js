@@ -1,7 +1,7 @@
 describe('Validações no carrinho de compras', () => {
 
     beforeEach(() => {
-        cy.visit('https://qa-fresh-store.vercel.app')
+        cy.visit('https://fresh-store-qa.vercel.app')
         cy.cadastro();
         cy.login();
     })

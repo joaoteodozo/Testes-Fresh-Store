@@ -1,7 +1,7 @@
 describe('Cadastro de usuário', () => {
 
     beforeEach(() => {
-        cy.visit('https://qa-fresh-store.vercel.app')
+        cy.visit('https://fresh-store-qa.vercel.app')
     })
   
     it('Realiza cadastro corretamente e em seguida realiza login', () => {

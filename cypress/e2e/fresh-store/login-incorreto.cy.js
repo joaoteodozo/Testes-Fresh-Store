@@ -1,7 +1,7 @@
 describe('Realiza login incorretamente e valida se as mensagens de erro são exibidas', () => {
 
     beforeEach(() => {
-        cy.visit('https://qa-fresh-store.vercel.app')
+        cy.visit('https://fresh-store-qa.vercel.app')
     })
   
     it('Valida se ao não preencher nenhum campo, a mensagem de erro é exibida', () => {

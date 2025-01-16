@@ -8,7 +8,7 @@ const numeroCasa = gerarNumeroCasa();
 describe('Realizar fluxo de compra com os três tipos de pagamentos diferentes', () => {
 
     beforeEach(() => {
-        cy.visit('https://qa-fresh-store.vercel.app');
+        cy.visit('https://fresh-store-qa.vercel.app');
         cy.cadastro();
         cy.login();
     })
