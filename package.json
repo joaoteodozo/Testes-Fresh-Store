@@ -169,7 +169,7 @@
     "yauzl": "^2.10.0"
   },
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress run"
   },
   "author": "João Teodozo",
   "license": "ISC",
